@@ -1,0 +1,30 @@
+version: "3.5"
+
+networks:
+    orderSys:
+
+services:
+    server:
+        container_name: golang-server-order
+        build:
+            context: .
+        working_dir: /project/order
+        volumes:
+            - .:/project/order
+        ports:
+            - 1944:1944
+        command: sh entrypoint.sh
+        restart: always
+        networks:
+            - orderSys
+
+    mongo1: 
+        container_name: order-mongo-1 # port 27017
+        image: mongo
+        restart: always
+        volumes:
+            - ./mongo-secret:/usr/mongo-secret
+            - ./mongo-entrypoint.sh:/usr/entrypoint.sh
+        networks:
+            - orderSys
+        command: sh /usr/entrypoint.sh

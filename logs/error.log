@@ -1,0 +1,135 @@
+msg: mongo: no documents in result
+ ^^^^^^ 
+goroutine 6 [running]:
+order/errors.GetStackError(0xf142a0, 0xc0002cc180, 0xc0001361e0, 0xf142a0, 0xc0002cc180, 0x0)
+	/project/order/errors/seatsError.go:31 +0x5b
+order/seats/repository/mongo.SeatsRepository.GetASeat(0xc000446a80, 0xf21b90, 0xc00011a000, 0xc000445920, 0x9454802ec01b770a, 0x10, 0xc19280, 0xcd4201, 0xc00015c120)
+	/project/order/seats/repository/mongo/seatsRepository.go:31 +0x2b8
+order/seats/usecase.SeatUseCase.GetASeat(...)
+	/project/order/seats/usecase/seatsUsecase.go:21
+order/seats/delivery/http.SeatsHandler.GetASeat(0xf20ba0, 0xc000020160, 0xc000582100)
+	/project/order/seats/delivery/http/seatHandler.go:45 +0x3e2
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000582100)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000582100)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002cf1e0, 0xc000582100)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002cf1e0, 0xf20600, 0xc0004701c0, 0xc000316000)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c
+net/http.serverHandler.ServeHTTP(0xc0004700e0, 0xf20600, 0xc0004701c0, 0xc000316000)
+	/usr/local/go/src/net/http/server.go:2887 +0xa3
+net/http.(*conn).serve(0xc000398140, 0xf21c00, 0xc000090040)
+	/usr/local/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3013 +0x39b
+ ========================
+[ Error ] time: 2021-06-05 13:02:05.6621719 +0000 UTC m=+2.394252101 
+msg: mongo: no documents in result
+ ^^^^^^^^^^^^^^ 
+goroutine 68 [running]:
+order/errors.GetStackError(0xf142c0, 0xc0002a61a0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/project/order/errors/seatsError.go:33 +0x90
+order/seats/repository/mongo.SeatsRepository.GetASeat(0xc000422a80, 0xf21c30, 0xc000028040, 0xc000090570, 0x9063649de3bfdf3e, 0x10, 0xc19280, 0xcd4201, 0xc0002a4360)
+	/project/order/seats/repository/mongo/seatsRepository.go:31 +0x2bb
+order/seats/usecase.SeatUseCase.GetASeat(...)
+	/project/order/seats/usecase/seatsUsecase.go:21
+order/seats/delivery/http.SeatsHandler.GetASeat(0xf20c40, 0xc0000920d0, 0xc0002f2100)
+	/project/order/seats/delivery/http/seatHandler.go:45 +0x3e2
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0002f2100)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0002f2100)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002ad520, 0xc0002f2100)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002ad520, 0xf206a0, 0xc0004421c0, 0xc0002f2000)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c
+net/http.serverHandler.ServeHTTP(0xc0004420e0, 0xf206a0, 0xc0004421c0, 0xc0002f2000)
+	/usr/local/go/src/net/http/server.go:2887 +0xa3
+net/http.(*conn).serve(0xc0003740a0, 0xf21ca0, 0xc000094100)
+	/usr/local/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3013 +0x39b
+ ========================
+[ Error ] time: 2021-06-05 13:02:51.2437991 +0000 UTC m=+1.874639801 
+msg: mongo: no documents in result
+ ^^^^^^^^^^^^^^ 
+goroutine 41 [running]:
+order/errors.GetStackError(0xf142c0, 0xc0002d4180, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/project/order/errors/seatsError.go:33 +0x90
+order/seats/repository/mongo.SeatsRepository.GetASeat(0xc00044ea80, 0xf21c30, 0xc0000a2000, 0xc000074630, 0x2eab844c53674df3, 0x10, 0xc19280, 0xcd4201, 0xc0002d0360)
+	/project/order/seats/repository/mongo/seatsRepository.go:31 +0x2bb
+order/seats/usecase.SeatUseCase.GetASeat(...)
+	/project/order/seats/usecase/seatsUsecase.go:21
+order/seats/delivery/http.SeatsHandler.GetASeat(0xf20c40, 0xc00060e050, 0xc000128200)
+	/project/order/seats/delivery/http/seatHandler.go:45 +0x3e2
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000128200)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000128200)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002d7520, 0xc000128200)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002d7520, 0xf206a0, 0xc000520000, 0xc000128100)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c
+net/http.serverHandler.ServeHTTP(0xc0004720e0, 0xf206a0, 0xc000520000, 0xc000128100)
+	/usr/local/go/src/net/http/server.go:2887 +0xa3
+net/http.(*conn).serve(0xc0001420a0, 0xf21ca0, 0xc000062140)
+	/usr/local/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3013 +0x39b
+ ========================
+
+
+[ Error ] time: 2021-06-05 13:02:54.0023303 +0000 UTC m=+4.633170501 
+msg: mongo: no documents in result
+ ^^^^^^^^^^^^^^ 
+goroutine 45 [running]:
+order/errors.GetStackError(0xf142c0, 0xc0002d4180, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/project/order/errors/seatsError.go:33 +0x90
+order/seats/repository/mongo.SeatsRepository.GetASeat(0xc00044ea80, 0xf21c30, 0xc0000a2000, 0xc000104ba0, 0x171fbfd941147dbd, 0x10, 0xc19280, 0xcd4201, 0xc0000e4240)
+	/project/order/seats/repository/mongo/seatsRepository.go:31 +0x2bb
+order/seats/usecase.SeatUseCase.GetASeat(...)
+	/project/order/seats/usecase/seatsUsecase.go:21
+order/seats/delivery/http.SeatsHandler.GetASeat(0xf20c40, 0xc00060e050, 0xc000128200)
+	/project/order/seats/delivery/http/seatHandler.go:45 +0x3e2
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000128200)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000128200)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002d7520, 0xc000128200)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002d7520, 0xf206a0, 0xc0004721c0, 0xc000128300)
+	/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c
+net/http.serverHandler.ServeHTTP(0xc0004720e0, 0xf206a0, 0xc0004721c0, 0xc000128300)
+	/usr/local/go/src/net/http/server.go:2887 +0xa3
+net/http.(*conn).serve(0xc000142140, 0xf21ca0, 0xc0000622c0)
+	/usr/local/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3013 +0x39b
+ ========================
+
+
