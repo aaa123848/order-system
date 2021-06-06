@@ -27,7 +27,8 @@ func NewSeatsRepository(client *mongo.Client) SeatsRepository {
 func (sr SeatsRepository) GetASeat(ctx context.Context, filter bson.M) ([]byte, error) {
 	col := sr.Client.Database("test").Collection("seats")
 	seat := domain.Seat{}
-	err := col.FindOne(ctx, filter).Decode(&seat)
+	got := col.FindOne(ctx, filter)
+	err := got.Decode(&seat)
 	if err != nil {
 		logger.LogStdError(err)
 		return nil, err

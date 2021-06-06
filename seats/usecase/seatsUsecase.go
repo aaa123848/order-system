@@ -26,7 +26,7 @@ func (s SeatUseCase) GetASeat(ctx context.Context, filter bson.M) ([]byte, error
 }
 
 func (s SeatUseCase) UpdateSeats(car string, num int, orderer string) error {
-	filter := bson.M{"position": bson.M{"car": car, "num": num}, "isorder": false}
+	filter := bson.M{"position.car": car, "position.num": num, "isorder": false}
 	update := bson.M{"$set": bson.M{"isorder": true, "orderby": orderer}}
 	return s.SeatRepository.UpdateSeats(filter, update)
 

@@ -1,1 +1,0 @@
-{"callerInfo":"file: /project/order/seats/usecase/seatsUsecase.go ; line: 21","funcname":"order/seats/repository/mongo.SeatsRepository.GetASeat","happenPoint":"file: /project/order/seats/repository/mongo/seatsRepository.go ; line: 32","level":"error","msg":"mongo: no documents in result","time":"2021-06-06T05:24:35Z"}
