@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"log"
 	"order/domain"
+	"order/logger"
 	"time"
 
 	myerrors "order/errors"
@@ -28,11 +29,13 @@ func (sr SeatsRepository) GetASeat(ctx context.Context, filter bson.M) ([]byte, 
 	seat := domain.Seat{}
 	err := col.FindOne(ctx, filter).Decode(&seat)
 	if err != nil {
-		return nil, myerrors.GetStackError(err)
+		logger.LogStdError(err)
+		return nil, err
 	}
 	res, err := json.Marshal(seat)
 	if err != nil {
-		return nil, myerrors.GetStackError(err)
+		logger.LogStdError(err)
+		return nil, err
 	}
 	return res, nil
 }

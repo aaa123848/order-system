@@ -3,10 +3,8 @@ package http
 import (
 	"context"
 	"fmt"
-	"log"
 	"order/domain"
 	myerror "order/errors"
-	"order/logger"
 	"reflect"
 	"strconv"
 	"strings"
@@ -33,7 +31,6 @@ func (s SeatsHandler) GetASeat(c *gin.Context) {
 	sarr := strings.Split(seatId, "-")
 	num, err := strconv.Atoi(sarr[1])
 	if err != nil {
-		log.Println(err)
 		c.JSON(501, gin.H{"msg": "wrong"})
 		return
 	}
@@ -47,7 +44,6 @@ func (s SeatsHandler) GetASeat(c *gin.Context) {
 		filter,
 	)
 	if err != nil {
-		logger.GetErrorLog(err)
 		c.JSON(501, gin.H{"msg": "wrong"})
 		return
 	}
