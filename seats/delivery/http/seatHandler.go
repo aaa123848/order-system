@@ -35,9 +35,8 @@ func (s SeatsHandler) GetASeat(c *gin.Context) {
 		return
 	}
 	filter := bson.M{
-		"position": bson.M{
-			"car": strings.ToUpper(sarr[0]), "num": num,
-		},
+		"position.car": strings.ToUpper(sarr[0]),
+		"position.num": num,
 	}
 	b, err := s.SeatUseCase.GetASeat(
 		ctx,
